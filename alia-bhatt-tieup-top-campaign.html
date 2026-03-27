@@ -12,27 +12,8 @@
     img { border: 0; display: block; max-width: 100%; }
     a { text-decoration: none; }
 
-    /* Slideshow: 2 slides × 5s = 10s total cycle */
-    @keyframes slide1 {
-      0%        { opacity: 1; z-index: 2; }
-      49.9%     { opacity: 1; z-index: 2; }
-      50%       { opacity: 0; z-index: 1; }
-      99.9%     { opacity: 0; z-index: 1; }
-      100%      { opacity: 1; z-index: 2; }
-    }
-    @keyframes slide2 {
-      0%        { opacity: 0; z-index: 1; }
-      49.9%     { opacity: 0; z-index: 1; }
-      50%       { opacity: 1; z-index: 2; }
-      99.9%     { opacity: 1; z-index: 2; }
-      100%      { opacity: 0; z-index: 1; }
-    }
-    .slide1 { animation: slide1 10s infinite; }
-    .slide2 { animation: slide2 10s infinite; }
-
     @media screen and (max-width: 600px) {
       .email-wrapper { width: 100% !important; }
-      .slideshow-wrap { width: 100% !important; height: auto !important; }
       .body-padding { padding-left: 24px !important; padding-right: 24px !important; }
     }
   </style>
@@ -75,37 +56,35 @@
           </td>
         </tr>
 
-        <!-- ===== HERO SLIDESHOW (CSS, 5s per slide) ===== -->
+        <!-- ===== HERO IMAGES SIDE BY SIDE ===== -->
         <tr>
           <td style="padding: 0; line-height:0; font-size:0;">
-            <div class="slideshow-wrap"
-                 style="position:relative; width:600px; height:600px; overflow:hidden; display:block;">
-
-              <!-- Slide 1: Alia Bhatt + Flatlay -->
-              <a href="https://uptownie.com/collections/new-in/products/pure-linen-front-tie-up-top-1"
-                 class="slide1"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; display:block; animation: slide1 10s infinite;">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/1780/3381/files/Copy_of_alia_bhatt_new_tie_up_shirt_celeb_video_with_flatlay_image_1080_x_1080_px.jpg?v=1774592542"
-                  alt="Alia Bhatt wearing the tie-up top — now in pure linen at Uptownie"
-                  width="600"
-                  style="width:100%; height:100%; display:block; object-fit:cover;"
-                />
-              </a>
-
-              <!-- Slide 2: Product image -->
-              <a href="https://uptownie.com/collections/new-in/products/pure-linen-front-tie-up-top-1"
-                 class="slide2"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; display:block; animation: slide2 10s infinite;">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/1780/3381/files/2_2be9a703-ef8f-4f11-82e2-fbad7bb0c62f.png?v=1774601779"
-                  alt="Pure Linen Front Tie-Up Top — Uptownie"
-                  width="600"
-                  style="width:100%; height:100%; display:block; object-fit:cover;"
-                />
-              </a>
-
-            </div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <!-- Image 1: Alia Bhatt + Flatlay -->
+                <td width="50%" style="padding:0; line-height:0; font-size:0;">
+                  <a href="https://uptownie.com/collections/new-in/products/pure-linen-front-tie-up-top-1">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/1780/3381/files/Copy_of_alia_bhatt_new_tie_up_shirt_celeb_video_with_flatlay_image_1080_x_1080_px.jpg?v=1774592542"
+                      alt="Alia Bhatt wearing the tie-up top"
+                      width="300"
+                      style="width:100%; display:block;"
+                    />
+                  </a>
+                </td>
+                <!-- Image 2: Product -->
+                <td width="50%" style="padding:0; line-height:0; font-size:0;">
+                  <a href="https://uptownie.com/collections/new-in/products/pure-linen-front-tie-up-top-1">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/1780/3381/files/2_2be9a703-ef8f-4f11-82e2-fbad7bb0c62f.png?v=1774601779"
+                      alt="Pure Linen Front Tie-Up Top — Uptownie"
+                      width="300"
+                      style="width:100%; display:block;"
+                    />
+                  </a>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
 
